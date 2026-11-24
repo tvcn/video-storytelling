@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://tvcn.org/assets/og-cover.png">
 <meta name="twitter:image:alt" content="运动控制：让镜头按路线走">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","name":"运动控制：让镜头按路线走","description":"运动控制先写机位路线：从哪起、经过什么、停在哪；只说“镜头运动”等于没说。","image":["https://tvcn.org/assets/og-cover.png"],"inLanguage":"zh-CN","url":"https://tvcn.org/article/motion-control/","publisher":{"@type":"Organization","name":"TVCN","logo":{"@type":"ImageObject","url":"https://tvcn.org/assets/icon-512.png"}},"headline":"运动控制：让镜头按路线走","author":{"@type":"Organization","name":"TVCN AI 组","url":"https://tvcn.org/about/#desk-ai"},"mainEntityOfPage":"https://tvcn.org/article/motion-control/","datePublished":"2026-11-20","dateModified":"2026-11-20"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TVCN","item":"https://tvcn.org/"},{"@type":"ListItem","position":2,"name":"AI","item":"https://ai.tvcn.org/"},{"@type":"ListItem","position":3,"name":"运动控制：让镜头按路线走","item":"https://tvcn.org/article/motion-control/"}]}]}</script>
-<link rel="stylesheet" href="../../assets/article.css?v=20261123c">
+<link rel="stylesheet" href="../../assets/article.css?v=20261124d">
 <script>try{var t=localStorage.getItem('tvcn.theme')||'auto';var d=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches;var r=t==='auto'?(d?'dark':'light'):t;document.documentElement.dataset.theme=r;document.documentElement.dataset.themePref=t;}catch(e){}</script>
 </head>
 <body class="static-page">
@@ -51,7 +51,7 @@
 <main id="main" class="static-main" tabindex="-1">
 <div class="wrap">
     <div class="breadcrumbs"><a href="../../">首页</a><span>/</span><a href="https://ai.tvcn.org/">AI 影像</a><span>/</span><span>运动控制：让镜头按路线走</span></div>
-    <header class="article-hero"><p class="eyebrow">AI 影像 / 生成</p><h1>运动控制：让镜头按路线走</h1><p class="article-deck">运动控制先写机位路线：从哪起、经过什么、停在哪；只说“镜头运动”等于没说。</p><div class="article-meta"><span>2 分钟阅读 · 现场手册</span><span><a href="../../about/#desk-ai">TVCN AI 组</a></span><span>编辑 2026-11</span></div></header><nav class="article-toc" aria-label="本文目录"><span class="toc-label">本文目录</span><ol><li><a href="#section-1">先锁“路径”，再锁“速度”</a></li><li><a href="#section-2">边界</a></li><li><a href="#section-3">首尾帧与运镜控制：先定“不能动”的东西</a></li><li><a href="#section-4">现场</a></li><li><a href="#section-5">怎么做</a></li><li><a href="#section-6">别踩</a></li><li><a href="#section-7">3 条验收</a></li></ol></nav>
+    <header class="article-hero"><p class="eyebrow">AI 影像 / 生成</p><h1>运动控制：让镜头按路线走</h1><p class="article-deck">运动控制先写机位路线：从哪起、经过什么、停在哪；只说“镜头运动”等于没说。</p><div class="article-meta"><span>3 分钟阅读 · 现场手册</span><span><a href="../../about/#desk-ai">TVCN AI 组</a></span><span>编辑 2026-11</span></div></header><nav class="article-toc" aria-label="本文目录"><span class="toc-label">本文目录</span><ol><li><a href="#section-1">先锁“路径”，再锁“速度”</a></li><li><a href="#section-2">边界</a></li><li><a href="#section-3">首尾帧与运镜控制：先定“不能动”的东西</a></li><li><a href="#section-4">现场</a></li><li><a href="#section-5">怎么做</a></li><li><a href="#section-6">别踩</a></li><li><a href="#section-7">3 条验收</a></li></ol></nav>
     
     
     <article class="article-body"><section class="editorial-depth"><h2 id="section-1">先锁“路径”，再锁“速度”</h2><p>运动控制要分两层：物体沿哪条路径走、在每个位置停多久。路径决定空间关系，速度决定重量。先画路径，再调曲线；不要只拉关键帧。</p><p>用一辆车或一个球测试：路径对了，再加缓入缓出；速度曲线不对，物体像在冰上滑。</p><h2 id="section-2">边界</h2><p>运动控制不是关键帧越多越好。关键帧太密，动作会顿；先定大姿势，再补中间。</p><h2 id="section-3">首尾帧与运镜控制：先定“不能动”的东西</h2>
@@ -64,14 +64,14 @@
 </tbody></table></div>
 <h3>项目级检查</h3>
 <ol><li>首帧用最终画质，不要用模糊截图；模型会把模糊当风格。</li><li>运镜速度写成“3 秒推近 10%”，不写“缓慢推近”。</li><li>检查运动中的边缘、手指和文字；出现撕裂就降运动幅度。</li><li>首尾帧之间加一个中段参考，长镜头才不容易跑偏。</li></ol>
-<p>如果客户给了一张低分辨率产品图，先重拍或重做首帧；不要在坏输入上反复抽卡。</p></section><section><h2 id="section-4">现场</h2><p>写机位路线：从门口推到桌前 1 米，停 2 秒；用参考视频或关键帧控制，别只写环绕。</p></section><section><h2 id="section-5">怎么做</h2><ol><li>写机位路线：从门口推到桌前 1 米，停 2 秒。</li><li>用参考视频或关键帧控制，不只写“环绕”。</li><li>跑三次确认路线可复现，再换变量。</li></ol></section><section><h2 id="section-6">别踩</h2><p>别只写“环绕、推拉”；没有起点和落点，模型只能乱走。</p></section></article><figure class="article-media inline-media">
+<p>如果客户给了一张低分辨率产品图，先重拍或重做首帧；不要在坏输入上反复抽卡。</p></section><section><h2 id="section-4">现场</h2><p>写机位路线：从门口推到桌前 1 米，停 2 秒；用参考视频或关键帧控制，别只写环绕。</p></section><section><h2 id="section-5">怎么做</h2><ol><li>写机位路线：从门口推到桌前 1 米，停 2 秒。</li><li>用参考视频或关键帧控制，不只写“环绕”。</li><li>跑三次确认路线可复现，再换变量。</li></ol></section><section><h2 id="section-6">别踩</h2><p>别只写“环绕、推拉”；没有起点和落点，模型只能乱走。</p></section><p class="media-disclosure"><strong>图片说明</strong>：本页封面、图解与步骤图是编辑示意或结构图，不是本页实测照片，也不能当作器材测试证据；AI 辅助生成的图会在图注标出。判断器材或画面，以正文的测试条件与现场记录为准。</p></article><figure class="article-media inline-media" data-image-nature="editorial-illustration">
     <img src="../../assets/notes/motion-control.svg" alt="运动控制：让镜头按路线走 概念图" loading="lazy" decoding="async" width="1280" height="720">
-    <figcaption><span>图解封面，非实拍。</span><span class="mono">TVCN 图解</span></figcaption>
-  </figure><figure class="diagram">
+    <figcaption><span>图解封面，非实拍。</span><span class="mono">TVCN 图解</span> <span class="fig-nature">编辑示意图，不是本页实测照片。</span></figcaption>
+  </figure><figure class="diagram" data-image-nature="editorial-illustration">
     <div class="diagram-head"><div><div class="diagram-kicker">DIAGRAM / Generation</div><h3 class="diagram-title">三步流程</h3></div><span class="mono">TVCN</span></div>
     <div class="diagram-body"><img class="diagram-svg" src="../../assets/notes/motion-control-steps.svg" alt="运动控制：让镜头按路线走 三步图解" loading="lazy" decoding="async" width="1280" height="720"></div>
     
-    <figcaption></figcaption>
+    <figcaption> <span class="fig-nature">编辑示意图，不是本页实测照片。</span></figcaption>
   </figure><div class="check-box check-box-after"><h2 id="section-7">3 条验收</h2><ul><li>提示里有起点、路径和落点，能画成一条线。</li><li>三次输出都走到同一落点，没有中途改方向。</li><li>换速度或焦段时，路线本身仍然可复现。</li></ul></div></article>
     
     
@@ -85,7 +85,7 @@
   <nav class="footer-sites" aria-label="站点导航"><a class="footer-site-link" href="https://tvcn.org/" data-site-nav="main">主站</a><a class="footer-site-link" href="https://story.tvcn.org/" data-site-nav="story">故事</a><a class="footer-site-link" href="https://shoot.tvcn.org/" data-site-nav="shoot">拍摄</a><a class="footer-site-link" href="https://post.tvcn.org/" data-site-nav="post">后期</a><a class="footer-site-link" href="https://ai.tvcn.org/" data-site-nav="ai" aria-current="page">AI</a><a class="footer-site-link" href="https://animation.tvcn.org/" data-site-nav="animation">动画</a><a class="footer-site-link" href="https://formats.tvcn.org/" data-site-nav="formats">片型</a><a class="footer-site-link" href="https://tools.tvcn.org/" data-site-nav="tools">工具</a><a class="footer-site-link" href="https://context.tvcn.org/" data-site-nav="context">影像史</a></nav>
   <div class="static-footer-inner">
     <span>文字与图解 CC BY-SA 4.0 · 代码 MIT</span>
-    <span><a href="../../about/">关于与编辑标准</a> · <a href="../../glossary/">术语表</a> · <a href="../../about/#corrections">信任与更正</a> · <a href="../../app/?r=article/motion-control" rel="nofollow">交互版</a> · <a href="../../search/">搜索</a> · <a href="../../">TVCN</a> · 2026-11-23</span>
+    <span><a href="../../about/">关于与编辑标准</a> · <a href="../../glossary/">术语表</a> · <a href="../../about/#corrections">信任与更正</a> · <a href="../../app/?r=article/motion-control" rel="nofollow">交互版</a> · <a href="../../search/">搜索</a> · <a href="../../">TVCN</a> · 2026-11-24</span>
   </div>
 </footer>
 <nav class="static-tabbar" aria-label="站点导航"><a class="tab-site-link" href="https://tvcn.org/" data-site-nav="main">主站</a><a class="tab-site-link" href="https://story.tvcn.org/" data-site-nav="story">故事</a><a class="tab-site-link" href="https://shoot.tvcn.org/" data-site-nav="shoot">拍摄</a><a class="tab-site-link" href="https://post.tvcn.org/" data-site-nav="post">后期</a><a class="tab-site-link" href="https://ai.tvcn.org/" data-site-nav="ai" aria-current="page">AI</a><a class="tab-site-link" href="https://animation.tvcn.org/" data-site-nav="animation">动画</a><a class="tab-site-link" href="https://formats.tvcn.org/" data-site-nav="formats">片型</a><a class="tab-site-link" href="https://tools.tvcn.org/" data-site-nav="tools">工具</a><a class="tab-site-link" href="https://context.tvcn.org/" data-site-nav="context">影像史</a></nav>

@@ -1,6 +1,6 @@
-# Experimental Film Template
+# Experimental Structure: Rules Before Effects
 
-> One rule, three repeats, one break. Without a rule, the break means nothing.
+> Set rules first: locked camera, repeated action, one color. Clear rules make stronger effects.
 
 ## Fill three lines before rolling
 
@@ -19,4 +19,4 @@
 | Aftermath | 55–60s | Return to the rule, incomplete | Ambience only | “What just happened” |
 | End card | 2s | Black or a still object | Silence | Space |
 
-Times are ceilings. Get one usable shot per segment before adding more. For acceptance, ask someone who has not read the script what the rule was and where it broke.
+Times are ceilings. Get one usable shot per segment before adding more.

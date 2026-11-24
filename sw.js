@@ -1,4 +1,4 @@
-const CACHE = "tvcn-shell-2026-11-24-v6";
+const CACHE = "tvcn-shell-2026-11-24-v7";
 const SHELL = [
   "./app/index.html",
   "./manifest.webmanifest",
