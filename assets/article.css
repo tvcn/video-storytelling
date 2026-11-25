@@ -5,7 +5,7 @@
     --surface: #fbfaf7;
     --surface-2: #ebe5dc;
     --ink: #171513;
-    --muted: #6f675d;
+    --muted: #6b645a;
     --line: rgba(23, 21, 19, .14);
     --line-strong: rgba(23, 21, 19, .24);
     --accent: #b04421;
@@ -532,7 +532,7 @@
   .page-head p { color: var(--muted); max-width: 690px; font-size: 15px; }
   .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--muted); margin: 22px 0 20px; }
   .breadcrumbs a:hover { color: var(--accent); }
-  .breadcrumbs span { opacity: .5; }
+  .breadcrumbs span { opacity: 1; }
 
   .path-hero { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding: 16px 0 28px; border-bottom: 1px solid var(--line); }
   .path-hero h1 { font-size: clamp(32px, 5vw, 58px); line-height: 1.03; margin: 12px 0; }
@@ -927,6 +927,13 @@
 
 /* static article shell */
 img{max-width:100%;height:auto}
+.article-gallery{max-width:760px;margin:32px auto 0;padding:20px 18px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.article-gallery .gallery-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:6px;color:var(--muted);font-size:12px}
+.article-gallery .article-figure{margin:18px 0 0}
+.article-gallery .article-figure img{width:100%;border-radius:12px;display:block;background:#eee}
+.article-gallery .article-figure figcaption{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);padding:8px 2px 0;line-height:1.5}
+.article-gallery .fig-nature{text-align:right;white-space:nowrap}
+@media(max-width:700px){.article-gallery{margin:22px 16px 0;padding:14px}.article-gallery .article-figure figcaption{display:block}.article-gallery .fig-nature{display:block;text-align:left;margin-top:2px}}
 .static-page .static-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
 .static-page .static-header-inner{max-width:var(--max);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .static-page .static-brand{text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.14em;font-size:15px}
@@ -1172,3 +1179,30 @@ img{max-width:100%;height:auto}
 .static-page .topic-card small{color:var(--muted);font:400 10.5px/1.3 var(--mono,monospace);white-space:nowrap}
 .static-page .topic-card:hover{border-color:var(--line-strong)}
 @media(max-width:560px){.static-page .topic-cards{grid-template-columns:1fr}.static-page .topic-page{padding:18px 16px 48px}}
+
+/* AI 2.0 hubs and home */
+.static-page .home-hero-art{margin:18px 0 4px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0d100f}
+.static-page .home-hero-art img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.static-page .hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 6px}
+.static-page .hub-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);color:var(--ink);text-decoration:none}
+.static-page .hub-card img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee}
+.static-page .hub-card span{padding:10px 12px 4px;font:600 10.5px/1.3 var(--mono,monospace);color:var(--accent);letter-spacing:.04em}
+.static-page .hub-card b{padding:0 12px;font-size:14px;line-height:1.4}
+.static-page .hub-card small{padding:4px 12px 12px;color:var(--muted);font-size:11.5px;line-height:1.55}
+.static-page .hub-card:hover{border-color:var(--line-strong);transform:translateY(-1px)}
+.static-page .hub-hero{padding-bottom:6px}
+.static-page .hub-nav{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.static-page .hub-nav a{padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font:500 11px/1.2 var(--mono,monospace);text-decoration:none}
+.static-page .hub-nav a[aria-current="page"]{border-color:var(--accent);color:var(--accent)}
+@media(max-width:760px){.static-page .hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.static-page .hub-grid{grid-template-columns:1fr}}
+
+@media(max-width:640px){.static-page .home-lead{display:block;width:100%;max-width:100%;white-space:normal;overflow-wrap:anywhere}.static-page .home-lead span{display:inline;white-space:normal}.static-page .home-actions{flex-wrap:wrap}.static-page .home-hero-art{margin:12px 0 4px}}
+
+
+.static-page .home-lead{display:block!important;width:100%!important;max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important}
+
+/* 2026-11-25: legacy spec tables must not force page-level overflow at 390px */
+.article-body .spec-table { table-layout: fixed; width: 100%; max-width: 100%; }
+.article-body .spec-table th,
+.article-body .spec-table td { overflow-wrap: anywhere; word-break: break-word; }
